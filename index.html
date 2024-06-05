@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caravan</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <!--Navbar com logo da marca e classes de estilo/responsividade-->
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3 box-shadow">
+    <a class="navbar-brand" href="index.html">
+      <img src="/img/caravan.svg" alt="logo caravan">
+    </a>
+    <!--botao sanduiche do navbar(quando tela reduzida)-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--div do conteudo do cabeçalho, lista ordenada de itens do menu-->
+    <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Locais</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="local.html">Califórnia</a>
+            <a class="dropdown-item" href="local.html">Paris</a>
+            <a class="dropdown-item" href="local.html">Dublin</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="planos.html">Planos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contato.html">Contato</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-primary ml-md-2" href="inscricao.html">Inscreva-se</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="container-fluid">
+    <div class="row bg-dark text-white">
+      <!--essa parte cuida do lado esquerdo da primeira parte do conteudo - Carousel-->
+      <div class="col-md-7 p-0">
+        <div id="carouselCidades" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselCidades" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselCidades" data-slide-to="1"></li>
+            <li data-target="#carouselCidades" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="/img/california.jpg" alt="Califórnia">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="display-4">Califórnia</h5>
+                <p>Conheça as praias mais lindas do mundo.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/img/dublin.jpg" alt="Dublin">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="display-4">Dublin</h5>
+                <p>Conheça a cultura irlandesa.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="/img/paris.jpg" alt="Paris">
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="display-4">Califórnia</h5>
+                <p>Conheça as praias mais lindas do mundo.</p>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselCidades" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselCidades" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+          </a>
+        </div>
+      </div>
+      <!--essa parte cuida do lado direito da primeira parte do conteudo-->
+      <div class="col-md-5 p-4 align-self-center">
+        <h1 class="display-4">Realize a viagem do seu sonho</h1>
+        <p class="lead">O melhor local para viajar é com a Caravan, mais de 10000 excursões concluidas.</p>
+        <form action="">
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="Digite seu e-mail">
+            <span class="input-group-append">
+              <button class="btn btn-primary">Inscreva-se</button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!--essa parte cuida do conteudo do meio da pagina-->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <div class="my-5">
+        <span class="h6 d-block">TUDO DE MELHOR PARA VOCÊ</span>
+        <h2 class="display-4 text-primary">Aproveite as vantagens</h2>
+      </div>
+      <div class="row">
+        <div class="col-xl-4 col-md-6">
+          <img src="/img/icones/passaporte.svg" alt="passaporte">
+          <h3>Documentos</h3>
+          <p>Certifique-se de que você está portando seu passaporte para viajar.</p>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class="icon d-flex justify-content-center">
+            <img src="/img/icones/passagens.svg" alt="passagens">
+          </div>
+          <h3>Passagens</h3>
+          <p>Compre passagens antecipadas para garantir descoltos ainda maiores.</p>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class="icon d-flex justify-content-center">
+            <img src="/img/icones/bagagens.svg" alt="bagagens">
+          </div>
+          <h3>Malas</h3>
+          <p>Evite malas cheias de bagagens, lembre-se de que o básico é sempre muito bem visto.</p>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class=" icon d-flex justify-content-center">
+            <img src="/img/icones/translado.svg" alt="translado">
+          </div>
+          <h3>Translado</h3>
+          <p>Isso vai ser muito divertido!</p>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class=" icon d-flex justify-content-center">
+            <img src="/img/icones/praias.svg" alt="praias">
+          </div>
+          <h3>Praias</h3>
+          <p>Explore os lugares mais lindos que a natureza nos proporciona.</p>
+        </div>
+        <div class="col-xl-4 col-md-6">
+          <div class=" icon d-flex justify-content-center">
+            <img src="/img/icones/turismo.svg" alt="Turismo">
+          </div>
+          <h3>Turismo</h3>
+          <p>Conheça lugares ricos em cultura e saboreie das melhoras emoções da vida.</p>
+        </div>
+      </div>
+
+      <!--Botão de compra-->
+      <a href="planos.html" class="btn btn-primary btn-lg mt-4">Comprar plano</a>
+    </div>
+  </section>
+
+  <section id="home-quote" class="p-md-5">
+    <blockquote class="blockquote text-center text-white p-md-5 p-3"><em>
+        <p class="display-4">"A felicidade não está na estrada que leva a algum lugar. A felicidade é a própria estrada."</p>
+      </em>
+      <footer class="blockquote-footer text-white">Bob Dylan</footer>
+    </blockquote>
+  </section>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/script.js"></script>
+</body>
+
+</html>
