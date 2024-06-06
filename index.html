@@ -10,6 +10,40 @@
 </head>
 
 <body>
+
+  <!-- Modal -->
+  <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Entre na sua conta</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Endereço de email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+              <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Senha</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Estou ciente dos termos de uso do site.</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!--Navbar com logo da marca e classes de estilo/responsividade-->
   <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top py-3 box-shadow">
     <a class="navbar-brand" href="index.html">
@@ -37,7 +71,7 @@
           <a class="nav-link" href="contato.html">Contato</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Login</a>
+          <a class="nav-link" href="#" data-toggle="modal" data-target="#modalLogin">Login</a>
         </li>
         <li class="nav-item">
           <a class="btn btn-outline-primary ml-md-2" href="inscricao.html">Inscreva-se</a>
@@ -160,6 +194,7 @@
     </div>
   </section>
 
+  <!--essa parte cuida da frase de impacto-->
   <section id="home-quote" class="p-md-5">
     <blockquote class="blockquote text-center text-white p-md-5 p-3"><em>
         <p class="display-4">"A felicidade não está na estrada que leva a algum lugar. A felicidade é a própria estrada."</p>
@@ -168,9 +203,99 @@
     </blockquote>
   </section>
 
+  <!--essa parte cuida das perguntas frequentes-->
+  <section class="container">
+    <div class="my-5 text-center">
+      <span class="h6 d-block">AINDA ESTÁ COM DÚVIDAS?</span>
+      <h2 class="display-4 text-primary">Perguntas Frequentes</h2>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6" id="perguntasFrequentes">
+        <div class="pergunta py-2">
+          <a class="lead" data-toggle="collapse" href="#pergunta1" aria-expanded="true" aria-controls="pergunta1">→ É possível cancelar a viagem?</a>
+          <div id="pergunta1" class="collapse show" data-parent="#perguntasFrequentes" role="tabpanel">
+            <p>R: É possivel com 3 dias de antecedência.</p>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="pergunta py-2">
+          <a class="lead" data-toggle="collapse" href="#pergunta2" aria-expanded="true" aria-controls="pergunta2">→ Qual a garantia que tenho se perder o voo?</a>
+          <div id="pergunta2" class="collapse" data-parent="#perguntasFrequentes" role="tabpanel">
+            <p>R: Seguro perca de voo. Você será redirecionado para o próximo voo.</p>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="pergunta py-2">
+          <a class="lead" data-toggle="collapse" href="#pergunta3" aria-expanded="true" aria-controls="pergunta3">→ Qual a principal forma de viagem?</a>
+          <div id="pergunta3" class="collapse" data-parent="#perguntasFrequentes" role="tabpanel">
+            <p>R: De Tiger preta, 2 escape. Usamos também Kombis hipsters e carros nascar, tudo de acordo com a preferencia do cliente.</p>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="pergunta py-2">
+          <a class="lead" data-toggle="collapse" href="#pergunta4" aria-expanded="true" aria-controls="pergunta4">→ Qual o melhor destino de viagem?</a>
+          <div id="pergunta4" class="collapse" data-parent="#perguntasFrequentes" role="tabpanel">
+            <p>R: Os clientes dizem que a Bósnia é um lugar maravilhoso.</p>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <div class="pergunta py-2">
+          <a class="lead" data-toggle="collapse" href="#pergunta5" aria-expanded="true" aria-controls="pergunta5">→ Vocês dão descontos para grupos grandes?</a>
+          <div id="pergunta5" class="collapse" data-parent="#perguntasFrequentes" role="tabpanel">
+            <p>R: Descontos de até 90% para familias acima de 8 unidades de pessoa.</p>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+      </div>
+    </div>
+    <div class="text-center my-4">
+      <p class="small m-1">FALE CONOSCO PARA MAIS DÚVIDAS</p>
+      <a class="btn btn-primary btn-lg" href="contato.html">Entre em Contato</a>
+    </div>
+  </section>
 
-
-
+  <!--essa parte cuida do rodapé-->
+  <footer class="bg-dark text-white">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-3 col-6">
+          <h4 class="h6">PÁGINAS</h4>
+          <ul class="list-unstyled">
+            <li><a href="planos.html">Planos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="inscricao.html">Inscreva-se</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-6">
+          <h4 class="h6">LOCAIS</h4>
+          <ul class="list-unstyled">
+            <li><a href="local.html">California</a></li>
+            <li><a href="local.html">Paris</a></li>
+            <li><a href="local.html">Dublin</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4 class="h6">DADOS DE CONTATO</h4>
+          <ul class="list-unstyled text-secondary">
+            <li>caravan@caravan.com.br</li>
+            <li>21 99999-9999</li>
+            <li>De Seg. à Sex. das 8h às 18h</li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h4 class="h6">REDES SOCIAIS</h4>
+          <ul class="list-unstyled">
+            <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="#" style="max-width: 140px">Facebook</a></li>
+            <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="#" style="max-width: 140px">Twitter</a></li>
+            <li><a class="btn btn-outline-secondary btn-sm btn-block mb-2" href="#" style="max-width: 140px">Youtube</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary text-center py-3">
+      <p class="mb-0">Caravan © 2024. Alguns direitos reservados mas nem todos.</p>
+    </div>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
